@@ -10,7 +10,7 @@ void setup()
 
   connectToWifi();
 
-  const String baseURL = "https://my-api.de/answers?q=";
+  const String baseURL = "https://manuelwestermeier.github.io/answers?q=";
   const String query = "some text";
 
   getAnswer(baseURL, query);
