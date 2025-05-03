@@ -28,9 +28,17 @@ bool loadCredentials(Credentials &cred)
 {
     if (!LittleFS.exists(CRED_FILE))
     {
-        Serial.println("[WiFiManager] No credentials file found.");
+        Serial.println("[WiFiManager] No credentials file found. Creating empty one.");
+        File file = LittleFS.open(CRED_FILE, "w");
+        if (file)
+        {
+            file.println();
+            file.println();
+            file.close();
+        }
         return false;
     }
+
     File file = LittleFS.open(CRED_FILE, "r");
     if (!file)
     {
