@@ -7,7 +7,7 @@ void setup()
 
   connectToWifi();
 
-  const String baseURL = "https://manuelwestermeier.github.io/?q=";
+  const String baseURL = "https://progressive-kaela-manuelwestermeier-e8db173d.koyeb.app/?q=";
   const String query = "some text";
 
   getAnswer(baseURL, query);
