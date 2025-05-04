@@ -1,6 +1,7 @@
-const http = require("http");
-const { URL } = require("url");
-const fetch = require("node-fetch");
+import http from "http";
+import fetch from "node-fetch";
+import dotenv from "dotenv";
+dotenv.config();
 
 const port = process.env.PORT || 8080;
 
