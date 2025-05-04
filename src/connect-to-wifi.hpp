@@ -161,7 +161,6 @@ void connectToWifi()
 {
     pinMode(LED_PIN, OUTPUT);
 
-    Serial.begin(115200);
     Serial.println("[WiFiManager] Starting...");
 
     // Mount LittleFS

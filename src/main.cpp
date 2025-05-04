@@ -1,16 +1,13 @@
-#include "./private.hpp" // Make sure this defines: const char* ssid; const char* password;
-
 #include "./connect-to-wifi.hpp"
 #include "./get-answer.hpp"
 
 void setup()
 {
   Serial.begin(115200);
-  delay(1000);
 
   connectToWifi();
 
-  const String baseURL = "https://manuelwestermeier.github.io/answers?q=";
+  const String baseURL = "https://manuelwestermeier.github.io/?q=";
   const String query = "some text";
 
   getAnswer(baseURL, query);
